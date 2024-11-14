@@ -26,6 +26,9 @@
     require_once("DAO/Excluir.php");
     use PHP\Modelo\DAO\Excluir;
 
+    require_once("Livro.php");
+    use PHP\Modelo\Livro;
+
 
     /*
     // posso usar mais de uma "require_once" e "use"
@@ -63,17 +66,26 @@
     //$inserir = new Inserir();
     //echo $inserir-> cadastrarPessoa($conn, "2","Buganza", "Rua", "11");
 
+    $inserir = new Inserir();
+    echo $inserir->cadastrarLivro($conn, '12345', 'Kaiju', 'Naruto', 'Vila da Folha', '124');
+
 
     $consultar = new Consultar();
     echo $consultar->consultarIndividual($conn, '1');
 
     $consultar = new Consultar();
-    echo $consultar->consultarIndividual($conn, '2');
+    echo $consultar->consultarLivro($conn, '7894');
 
     $atualizar = new Atualizar();
     echo $atualizar -> atualizarPessoa($conn, "nome", "Eduardo", 1);
 
+    $atualizar = new Atualizar();
+    echo $atualizar -> atualizarLivro($conn, 'isbn', '45679', '12345');
+    
+
     $excluir = new Excluir();
     $excluir -> excluirPessoa($conn, 1);
+
+    
 
 ?>

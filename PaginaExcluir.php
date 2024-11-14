@@ -14,24 +14,24 @@ use PHP\Modelo\DAO\Excluir;
     <head>
 
         <meta charset="UTF-8"
-        <title>Pagina Excluir</title>
+        <title>Excluir:</title><br><br>
 
     </head>
 
     <body>
 
         <form method="POST">
-            <label>Código: </label>
-            <input type="number" name="codigo" id="codigo"/><br><br>
+            <label>ISBN: </label>
+            <input type="number" name="isbn" id="isbn"/><br><br>
 
             <button type="submit">Excluir
 
                 <?php
                 
                     $conexao = new Conexao();
-                    $codigo = $_POST['codigo'];
+                    $isbn = $_POST['isbn'];
                     $excluir = new Excluir();
-                    $excluir-> excluirPessoa($conexao, $codigo);
+                    $excluir-> excluirPessoa($conexao, $isbn);
                 
                 ?>
 

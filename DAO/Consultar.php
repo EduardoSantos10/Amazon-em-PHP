@@ -36,6 +36,36 @@
 
         }
 
+        function consultarLivro(Conexao $conexao, int $isbn){
+
+            try{
+
+                $conn = $conexao->conectar();
+                $sql = "select * from pessoa where isbn = '$isbn'";
+                $result = mysqli_query($conn, $sql);
+
+                while($dados = mysqli_fetch_array($result))
+                {
+                    if($dados['isbn'] == $isbn){
+                        echo "<br>ISBN: ".$dados['isbn'].
+                             "<br>Nome: ".$dados['nome'].
+                             "<br>Autor: ".$dados['autor'].
+                             "<br>Editora: ".$dados['editora'].
+                             "<br>Preço: ".$dados['preco'];
+                        return; //encerrar o processo 
+                    }
+                    echo "Codigo digitado não é válido!";
+                }
+
+            }catch(\Exception $erro)
+            {
+
+                echo $erro;
+
+            }
+
+        }
+
     }
 
 ?>

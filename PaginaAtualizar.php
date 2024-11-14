@@ -20,19 +20,18 @@
     <body>
 
         <form method="POST">
-            <label>Código: </label>
-            <input type="number" name="codigo" id="codigo"/><br><br>
+            <label>ISBN: </label>
+            <input type="number" name="isbn" id="isbn"/><br><br>
 
             <label>Campo: </label>
             <select name="atualizacao">
                 <option value="nome">Nome: </option>
-                <option value="telefone">Telefone: </option>
-                <option value="endereco">Endereço: </option>
+                <option value="autor">Autor: </option>
+                <option value="editora">Editora: </option>
             </select><br><br>
 
             <label>Novo Dado: </label>
             <input type="text" name="novoDado" id="novoDado"/><br><br>
-    
 
         <button type="submit">Atualizar
 
@@ -40,11 +39,11 @@
             $conexao = new Conexao();
             $atualizar = new Atualizar();
 
-            $codigo = $_POST['codigo'];
+            $isbn = $_POST['isbn'];
             $campo = $_POST['atualizacao'];
             $novoDado = $_POST['novoDado'];
 
-            echo $atualizar -> atualizarPessoa($conexao, $campo, $novoDado, $codigo);
+            echo $atualizar -> atualizarPessoa($conexao, $campo, $novoDado, $isbn);
             
             ?>
 

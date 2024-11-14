@@ -24,9 +24,9 @@
 
         <form method="POST">
 
-            <label>Código: </label>
+            <label>ISBN: </label>
 
-            <input type="number" name="codigo" id="codigo"><br><br>
+            <input type="number" name="isbn" id="isbn"><br><br>
 
             <button type="submit"> Consultar
 
@@ -36,11 +36,11 @@
                     $conexao = new Conexao();
                 
                     //coletar o codigo
-                    $codigo = $_POST['codigo'];
+                    $isbn = $_POST['isbn'];
 
                     //chamar o consultar
                     $consultar = new Consultar();
-                    echo $consultar -> consultarIndividual($conexao, $codigo);
+                    echo $consultar -> consultarIndividual($conexao, $isbn);
     
                 ?>
             </button>

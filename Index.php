@@ -6,7 +6,6 @@
     use PHP\Modelo\DAO\Inserir;
     use PHP\Modelo\DAO\Conexao;
 
-
 ?>
 
 
@@ -20,20 +19,22 @@
 
 <body>
 
-
     <form method="POST">
 
-        <label>Código: </label><br>
-        <input type="number" name="codigo" id="codigo"><br><br>
+        <label>ISBN: </label><br>
+        <input type="number" name="isbn" id="isbn"><br><br>
 
-        <label>Nome: </label><br>
-        <input type="text" name="nome" id="nome"><br><br>
+        <label>Nome do Livro: </label><br>
+        <input type="texts" name="nome" id="nome"><br><br>
 
-        <label>Endereço: </label><br>
-        <input type="text" name="endereco" id="endereco"><br><br>
+        <label>Autor: </label><br>
+        <input type="text" name="autor" id="autor"><br><br>
 
-        <label>Telefone: </label><br>
-        <input type="text" name="telefone" id="telefone"><br><br>
+        <label>Editora: </label><br>
+        <input type="text" name="editora" id="editora"><br><br>
+
+        <label>Preço: </label><br>
+        <input type="number" name="preco" id="preco"><br><br>
 
         <button type="submit">Cadastrar
 
@@ -42,17 +43,17 @@
             $conexao = new Conexao();// conectando o banco
         
             // pegando os dados do usuário
-            $codigo   = $_POST['codigo'];
-            $nome     = $_POST['nome'];
-            $endereco = $_POST['endereco'];
-            $telefone = $_POST['telefone'];
+            $isbn    = $_POST['isbn'];
+            $nome    = $_POST['nome'];
+            $autor   = $_POST['autor'];
+            $editora = $_POST['editora'];
+            $preco   = $_POST['preco'];
 
             // chamar a classe inserir
             $inserir = new Inserir();
-            echo $inserir->cadastrarPessoa($conexao, $codigo, $nome, $endereco, $telefone);
+            echo $inserir->cadastrarLivro($conexao, $isbn, $nome, $autor, $editora, $preco);
         
         ?>
-
 
         </button>
 

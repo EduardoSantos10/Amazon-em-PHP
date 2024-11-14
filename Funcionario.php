@@ -30,15 +30,6 @@
             "<br>Salario: ".$this->salario;
         }
 
-
-
-
     }
-
-
-
-
-
-
 
 ?>
