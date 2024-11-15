@@ -70,21 +70,24 @@
     echo $inserir->cadastrarLivro($conn, '12345', 'Kaiju', 'Naruto', 'Vila da Folha', '124');
 
 
-    $consultar = new Consultar();
+    //$consultar = new Consultar();
     echo $consultar->consultarIndividual($conn, '1');
 
     $consultar = new Consultar();
-    echo $consultar->consultarLivro($conn, '7894');
+    echo $consultar->consultarLivro($conn, '2468');
+
+    //$atualizar = new Atualizar();
+    //echo $atualizar -> atualizarPessoa($conn, "nome", "Eduardo", 1);
 
     $atualizar = new Atualizar();
-    echo $atualizar -> atualizarPessoa($conn, "nome", "Eduardo", 1);
-
-    $atualizar = new Atualizar();
-    echo $atualizar -> atualizarLivro($conn, 'isbn', '45679', '12345');
+    echo $atualizar -> atualizarLivro($conn, 'isbn', 'JavaScript', '2468');
     
 
     $excluir = new Excluir();
     $excluir -> excluirPessoa($conn, 1);
+
+    $excluir = new Excluir();
+    $excluir -> excluirLivro($conn, 1);
 
     
 

@@ -9,7 +9,7 @@
     class Atualizar
     {
 
-        function atualizarPessoa(
+       /* function atualizarPessoa(
             Conexao $conexao,
             string $campo,
             string $novoDado,
@@ -37,7 +37,7 @@
 
             }
 
-        }
+        }*/
 
         function atualizarLivro(
             Conexao $conexao,
@@ -47,8 +47,8 @@
         ){
             try{
                 $conn = $conexao -> conectar();
-                $sql = "update pessoa set $campo = 
-                        '$novoDado' where codigo = '$isbn'";
+                $sql = "update livro set $campo = 
+                        '$novoDado' where isbn = '$isbn'";
 
                 $result = mysqli_query($conn, $sql);
 

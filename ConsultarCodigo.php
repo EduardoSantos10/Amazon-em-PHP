@@ -40,7 +40,7 @@
 
                     //chamar o consultar
                     $consultar = new Consultar();
-                    echo $consultar -> consultarIndividual($conexao, $isbn);
+                    echo $consultar -> consultarLivro($conexao, $isbn);
     
                 ?>
             </button>

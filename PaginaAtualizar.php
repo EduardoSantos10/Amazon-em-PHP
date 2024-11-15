@@ -14,7 +14,7 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>Página Atualizar</title>
+        <title>Página Atualizar: </title>
     </head>
 
     <body>
@@ -27,7 +27,7 @@
             <select name="atualizacao">
                 <option value="nome">Nome: </option>
                 <option value="autor">Autor: </option>
-                <option value="editora">Editora: </option>
+                <option value="preco">Preço: </option>
             </select><br><br>
 
             <label>Novo Dado: </label>
@@ -43,7 +43,7 @@
             $campo = $_POST['atualizacao'];
             $novoDado = $_POST['novoDado'];
 
-            echo $atualizar -> atualizarPessoa($conexao, $campo, $novoDado, $isbn);
+            echo $atualizar -> atualizarLivro($conexao, $campo, $novoDado, $isbn);
             
             ?>
 

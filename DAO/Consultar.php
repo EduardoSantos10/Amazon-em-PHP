@@ -41,7 +41,7 @@
             try{
 
                 $conn = $conexao->conectar();
-                $sql = "select * from pessoa where isbn = '$isbn'";
+                $sql = "select * from livro where isbn = '$isbn'";
                 $result = mysqli_query($conn, $sql);
 
                 while($dados = mysqli_fetch_array($result))

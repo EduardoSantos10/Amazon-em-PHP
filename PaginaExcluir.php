@@ -31,7 +31,7 @@ use PHP\Modelo\DAO\Excluir;
                     $conexao = new Conexao();
                     $isbn = $_POST['isbn'];
                     $excluir = new Excluir();
-                    $excluir-> excluirPessoa($conexao, $isbn);
+                    $excluir-> excluirLivro($conexao, $isbn);
                 
                 ?>
 
