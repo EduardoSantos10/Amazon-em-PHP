@@ -17,13 +17,10 @@
 
 <body>
 
-    <a href="Index.php"><button>Cadastrar</button></a>
+    
     <a href="Index.php" class="btn btn-primary enable" tabindex="-1" role="button" aria-disabled="false">Selecionar Livro</a>
-    <a href="ConsultarCodigo.php"><button>Consultar</button></a>
     <a href="ConsultarCodigo.php" class="btn btn-primary enable" tabindex="-1" role="button" aria-disabled="false">Consultar Pedido</a>
-    <a href="PaginaAtualizar.php"><button>Atualizar</button></a>
     <a href="PaginaAtualizar.php" class="btn btn-primary enable" tabindex="-1" role="button" aria-disabled="false">Atualizar Carrinho</a>
-    <a href="PaginaExcluir.php"><button>Excluir</button></a>
     <a href="PaginaExcluir.php" class="btn btn-primary enable" tabindex="-1" role="button" aria-disabled="false">Excluir Pedido</a>
     <div id="carouselExampleIndicators" class="carousel slide">
   <div class="carousel-indicators">

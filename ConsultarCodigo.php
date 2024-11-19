@@ -16,11 +16,14 @@
 
         <meta charset="UTF-8"/>
         <title>Página de Consulta</title>
+        <body style="background-image:url('https://img.odcdn.com.br/wp-content/uploads/2023/01/amazon-compras.jpg'); background-repeat: no-repeat; background-size: 100%;"></body>
 
     </head>
 
 
     <body>
+
+        
 
         <form method="POST">
 
@@ -46,9 +49,13 @@
             </button>
 
         </form>
+        
         <br><br>
         <a href="menu.php"><button>Voltar</button></a>
 
     </body>
+
+    <a href="Menu.php" class="btn btn-primary enable" tabindex="-1" role="button" aria-disabled="false"><button>Selecionar Livro</button></a><br><br>
+
 
 </html>

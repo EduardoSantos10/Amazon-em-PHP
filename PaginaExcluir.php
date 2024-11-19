@@ -14,7 +14,8 @@ use PHP\Modelo\DAO\Excluir;
     <head>
 
         <meta charset="UTF-8"
-        <title>Excluir:</title><br><br>
+        <title>Excluir: </title><br><br>
+        <body style="background-image:url('https://www.tweeteraser.com/br/resources/wp-content/uploads/2024/05/computer-644457_640.png'); background-repeat: no-repeat; background-size: 100%;"></body>
 
     </head>
 

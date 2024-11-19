@@ -15,14 +15,13 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Página Principal</title>
-    <link rel="stylesheet" type="text" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-        <body style="background-image:url('https://i.pinimg.com/originals/b8/00/87/b800878ec9ca72ed7f4ebe64e4aa1832.jpg'); background-repeat: no-repeat; background-size: 100%;"></body>
+        <body style="background-image:url('https://cdn.prod.website-files.com/666c59b4a59104c02f341fce/67100e39f23d3e6c49b58f46_amazon-KDP.webp'); background-repeat: no-repeat; background-size: 100%;"></body>
 
     <form method="POST">
 
@@ -30,7 +29,7 @@
         <input type="number" name="isbn" id="isbn"><br><br>
 
         <label>Nome do Livro: </label><br>
-        <input type="texts" name="nome" id="nome"><br><br>
+        <input type="text" name="nome" id="nome"><br><br>
 
         <label>Autor: </label><br>
         <input type="text" name="autor" id="autor"><br><br>
@@ -43,22 +42,23 @@
 
         <button type="submit">Cadastrar
 
-        <?php
+            <?php
 
-            $conexao = new Conexao();// conectando o banco
-        
-            // pegando os dados do usuário
-            $isbn    = $_POST['isbn'];
-            $nome    = $_POST['nome'];
-            $autor   = $_POST['autor'];
-            $editora = $_POST['editora'];
-            $preco   = $_POST['preco'];
+                
+                $conexao = new Conexao();// conectando o banco
+            
+                // pegando os dados do usuário
+                $isbn    = $_POST['isbn'];
+                $nome    = $_POST['nome'];
+                $autor   = $_POST['autor'];
+                $editora = $_POST['editora'];
+                $preco   = $_POST['preco'];
 
-            // chamar a classe inserir
-            $inserir = new Inserir();
-            echo $inserir->cadastrarLivro($conexao, $isbn, $nome, $autor, $editora, $preco);
-        
-        ?>
+                // chamar a classe inserir
+                $inserir = new Inserir();
+                echo $inserir->cadastrarLivro($conexao, $isbn, $nome, $autor, $editora, $preco);
+            
+            ?>
 
         </button>
 

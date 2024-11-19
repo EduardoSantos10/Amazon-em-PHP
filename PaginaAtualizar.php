@@ -14,10 +14,14 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>Página Atualizar: </title>
+        <title>Página Atualizar</title>
+        <body style="background-image:url('https://blog.tcitechs.com/wp-content/uploads/2021/04/software-update-popups.png'); background-repeat: no-repeat; background-size: 100%;"></body>
+
     </head>
 
     <body>
+
+        
 
         <form method="POST">
             <label>ISBN: </label>
@@ -32,6 +36,8 @@
 
             <label>Novo Dado: </label>
             <input type="text" name="novoDado" id="novoDado"/><br><br>
+
+            
 
         <button type="submit">Atualizar
 
@@ -51,6 +57,8 @@
         </form>
         <br><br>
         <a href="menu.php"><button>Voltar</button></a>
+
+        <a href="Menu.php" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true"><button>Voltar</button></a><br><br>
 
     </body>
 
