@@ -23,8 +23,6 @@
 
     <body>
 
-        
-
         <form method="POST">
 
             <label>ISBN: </label>
@@ -35,6 +33,8 @@
 
                 <?php
 
+                    if(isset($_POST['isbn'])){
+
                     //conexão com o banco
                     $conexao = new Conexao();
                 
@@ -44,6 +44,7 @@
                     //chamar o consultar
                     $consultar = new Consultar();
                     echo $consultar -> consultarLivro($conexao, $isbn);
+                    }
     
                 ?>
             </button>
@@ -54,8 +55,6 @@
         <a href="menu.php"><button>Voltar</button></a>
 
     </body>
-
-    <a href="Menu.php" class="btn btn-primary enable" tabindex="-1" role="button" aria-disabled="false"><button>Selecionar Livro</button></a><br><br>
 
 
 </html>
